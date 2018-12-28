@@ -6,26 +6,29 @@
    */
 
 // ======== OBJECTS DEFINITIONS ========
-// Define your objects here
+function createInhab(nature, gender, name, says, legs, hands, friendlyTo) {
+  return {
+    nature: nature,
+    gender: gender,
+    name: name,
+    says: says,
+    legs: legs,
+    hands: hands,
+    friendlyTo: friendlyTo.join(' and ')
+  }
+};
 
+const cat = createInhab('cat', 'female', 'Jessy', 'Wanna eat!', 4, 0, ['Justin']);
+const dog = createInhab('dog', 'male', 'Kim', 'Awa-waw!', 4, 0, ['Justin', 'Kate']);
+const woman = createInhab('woman', 'female', 'Kate', 'I need hugs!', 2, 2, ['Kim', 'Justin']);
+const man = createInhab('man', 'male', 'Justin', 'I love comics.', 2, 2, ['Kim', 'Jessy', 'Kate']);
 
 // ======== OUTPUT ========
-/* Use print(message) for output.
-   Default tag for message is <pre>. Use print(message,'div') to change containing element tag.
+function printInh(obj) {
+  print(obj.name + ' is a ' + obj.nature + '. Sometime says: ' + obj.says + ' has ' + obj.legs + ' legs, ' + obj.hands + ' hands.' + ' Friendly with ' + obj.friendlyTo + '. ' + obj.gender + ', as you may guess.');
+}
 
-   Message can contain HTML markup. You may also tweak index.html and/or styles.css.
-   However, please, REFRAIN from improving visuals at least until your code is reviewed
-   so code reviewers might focus on a single file that is index.js.
-   */
-
-/* Print examples:
-   print('ABC');
-   print('<strong>ABC</strong>');
-   print('<strong>ABC</strong>', 'div');
-
-   print('human; John; male; 2; 2; Hello world!; Rex, Tom, Jenny');
-   print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
-   print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
-   */
-
-
+printInh(cat);
+printInh(dog);
+printInh(man);
+printInh(woman);
