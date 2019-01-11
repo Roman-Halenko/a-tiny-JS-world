@@ -20,7 +20,7 @@ class Inhabitant {
         this.friends = this.friends.concat(friendObjects);
     }
 
-    about() {
+    toString() {
         return [
           `name: ${this.name}`,
           `nature: ${this.nature}`,
@@ -38,8 +38,8 @@ class Human extends Inhabitant {
         this.hands = hands;
     }
 
-    about() {
-        return super.about() + `; hands: ${this.hands};`;
+    toString() {
+        return super.toString() + `; hands: ${this.hands};`;
     }
 };
 
@@ -65,4 +65,4 @@ dog.addFriend(woman, man);
 man.addFriend(woman, dog, cat);
 woman.addFriend(man, dog);
 
-[cat, dog, man, woman].forEach( e => { print(e.about()) });
+[cat, dog, man, woman].forEach(e => print(e));
