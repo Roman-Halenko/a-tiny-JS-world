@@ -1,5 +1,5 @@
-function print(message, tag = 'pre') {
-  var element = document.createElement(tag);
+function printElement(message) {
+  var element = document.createElement('pre');
   element.innerHTML = message;
   console.log('PRINT:', message);
   document.getElementById('main').appendChild(element);
@@ -20,4 +20,3 @@ function makeGitHubLink(currentUrl, filePath) {
   var element = document.getElementById(elementId);
   element.href = makeGitHubLink(location.href, 'index.js');
 })('source-code');
-

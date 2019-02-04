@@ -65,4 +65,4 @@ dog.addFriend(woman, man);
 man.addFriend(woman, dog, cat);
 woman.addFriend(man, dog);
 
-[cat, dog, man, woman].forEach(e => print(e));
+[cat, dog, man, woman].forEach(printElement);
